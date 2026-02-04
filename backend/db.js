@@ -1,5 +1,13 @@
 const mongoose = require('mongoose');
 
+mongoose.connect('mongodb+srv://vineetsainiii007_db_user:uLrsg8Z07FbmCnnU@vineet.tetyk5v.mongodb.net/')
+.then(() => {
+    console.log("database connected");
+})
+.catch((err) => {
+    console.log("connection errror:",err);
+});
+
 const userSchema = new mongoose.Schema({
     username:{
         required : true,
