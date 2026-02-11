@@ -5,10 +5,10 @@ const app = express();
 const cors = require("cors");
 
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "*",
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: process.env.FRONTEND_URL, // your frontend deployed URL
   credentials: true
 }));
+
 app.use(express.json());
 
 
