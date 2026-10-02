@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "https://payzo-production.up.railway.app",
+  baseURL: import.meta.env.VITE_API_URL || "https://payzo-ch32.onrender.com",
 });
 
 api.interceptors.request.use((config) => {
