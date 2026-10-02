@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://vineetsainiii007_db_user:uLrsg8Z07FbmCnnU@vineet.tetyk5v.mongodb.net/paytm')
+if (!process.env.MONGO_URL) {
+    throw new Error('MONGO_URL is required');
+}
+
+mongoose.connect(process.env.MONGO_URL)
 .then(() => {
     console.log("database connected");
 })
